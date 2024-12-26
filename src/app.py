@@ -4,8 +4,8 @@ from PIL import Image
 import numpy as np
 
 # Load model
-model_1 = tf.keras.models.load_model('src/model/drowsinessDetection.h5')
-model_2 = tf.keras.models.load_model('src/model/drowsinessDetectionMobileNet.h5')
+model_1 = tf.keras.models.load_model('DrowsinessDetection/src/model/drowsinessDetection.h5')
+model_2 = tf.keras.models.load_model('DrowsinessDetection/src/model/drowsinessDetectionMobileNet.h5')
 
 # Model selection
 selected_model = st.radio("Select Model", ("Drowsiness Detection CNN", "Drowsiness Detection MobileNet"))
