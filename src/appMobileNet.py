@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 # Load model
-model_2 = tf.keras.models.load_model('src/model/drowsinessDetectionMobileNet.h5')
+model_2 = tf.keras.models.load_model('src/model/drowsinessDetectionMobileNet.h5', custom_objects={'MobileNetV2': tf.keras.applications.mobilenet_v2.MobileNetV2, 'GlobalAveragePooling2D': tf.keras.layers.GlobalAveragePooling2D, 'Dropout': tf.keras.layers.Dropout, 'Dense': tf.keras.layers.Dense, 'Model': tf.keras.models.Model})
 
 # Model selection
 selected_model = st.radio("Select Model", ("Drowsiness Detection MobileNet"))
