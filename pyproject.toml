@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "DrowsinessDetection"
+version = "0.1.0"
+description = "Drowsiness Detection App"
+authors = ["Muhamamad Luthfi <muhammad.luthfi2502@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.41.1"  # Or the specific version you need
+tensorflow = "^2.18.0" 
+joblib = "^1.4.2"
+scikit-learn = "^1.6.0" 
+Pillow = "^10.1.0" 
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
