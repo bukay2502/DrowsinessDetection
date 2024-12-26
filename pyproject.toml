@@ -8,11 +8,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-streamlit
-tensorflow
-joblib
-scikit-learn
-Pillow
+streamlit ="*"
+tensorflow ="*"
+joblib ="*"
+scikit-learn ="*"
+Pillow ="*"
 
 [build-system]
 requires = ["poetry-core"]
