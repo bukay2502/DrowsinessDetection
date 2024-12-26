@@ -1,4 +1,3 @@
-# DrowsinessDetection
 # Klasifikasi Drowsiness dengan CNN dan MobileNet
 
 ## Deskripsi
