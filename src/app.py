@@ -5,24 +5,12 @@ import numpy as np
 
 # Load model
 model_1 = tf.keras.models.load_model('src/model/drowsinessDetection.h5')
-model_2 = tf.keras.models.load_model(
-    'src/model/drowsinessDetectionMobileNet.h5', 
-    custom_objects={
-        'MobileNetV2': tf.keras.applications.mobilenet_v2.MobileNetV2,
-        'GlobalAveragePooling2D': tf.keras.layers.GlobalAveragePooling2D,
-        'Dropout': tf.keras.layers.Dropout, 
-        'Dense': tf.keras.layers.Dense,
-        'Model': tf.keras.models.Model
-    }
-)
 
 # Model selection
-selected_model = st.radio("Select Model", ("Drowsiness Detection CNN", "Drowsiness Detection MobileNet"))
+selected_model = st.radio("Select Model", ("Drowsiness Detection CNN"))
 
 if selected_model == "Drowsiness Detection CNN":
     model = model_1
-else:
-    model = model_2
 
 # Judul aplikasi
 st.title('Deteksi Kantuk')
@@ -37,8 +25,6 @@ if uploaded_file is not None:
     # Preprocessing
     if model == model_1:
         img = img.resize((112, 112))  # Ubah ukuran sesuai input model
-    else:
-        img = img.resize((128, 128))
     img = np.array(img) / 255.0  # Normalisasi
     img = np.expand_dims(img, axis=0)  # Tambah dimensi batch
 
