@@ -42,14 +42,16 @@ Sebelum dilatih, gambar-gambar dalam dataset di-preprocess terlebih dahulu. Pros
 ## Hasil
 
 *   **Model CNN:** 
-    *   Akurasi pada data testing: 99.95% 
+    *   Akurasi pada data testing: 99.95%
+    *   ![Test Akurasi](CNN_Test_Accuracy.jpg)
     *   Presisi, recall, dan F1-score untuk kedua kelas adalah 1.00.
-    *   ![Grafik Akurasi](CNN_Classification_Report.jpg)
+    *   ![Report](CNN_Classification_Report.jpg)
     *   ![Grafik Akurasi](CNN_Model_Accuracy.jpg)
     *   ![Grafik Loss](CNN_Loss.jpg)
 *   **Model MobileNetV2:**
     *   Akurasi pada data testing: 94.91%
+    *   ![Test Akurasi](MobileNet_Test_Accuracy.jpg)
     *   Presisi, recall, dan F1-score untuk kedua kelas di atas 90%.
-    *   ![Grafik Akurasi](MobileNet_Classification_Report.jpg)
+    *   ![Report](MobileNet_Classification_Report.jpg)
     *   ![Grafik Akurasi](MobileNet_Model_Accuracy.jpg)
     *   ![Grafik Loss](MobileNet_Loss.jpg)
